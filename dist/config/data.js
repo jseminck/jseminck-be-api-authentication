@@ -28,7 +28,7 @@ exports.default = function () {
             while (1) {
                 switch (_context2.prev = _context2.next) {
                     case 0:
-                        if (!(process.env.NODE_ENV === "DEVELOPMENT" || process.env.NODE_ENV === "TEST")) {
+                        if (!(true && process.env.NODE_ENV === "DEVELOPMENT" || process.env.NODE_ENV === "TEST")) {
                             _context2.next = 11;
                             break;
                         }
