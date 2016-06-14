@@ -18,6 +18,4 @@ var cn = {
     password: ''
 };
 
-console.log('Connecting to: ' + (process.env.DATABASE_URL || cn));
-
 exports.default = (0, _pgPromise2.default)()(process.env.DATABASE_URL || cn);

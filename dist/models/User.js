@@ -56,18 +56,17 @@ var updateLastLogin = exports.updateLastLogin = function () {
             while (1) {
                 switch (_context2.prev = _context2.next) {
                     case 0:
-                        console.log("updateLastLogin: ", username);
-                        _context2.next = 3;
+                        _context2.next = 2;
                         return UserModel.update({
                             column: "last_login",
                             value: "current_timestamp",
                             where: { column: "username", value: username }
                         });
 
-                    case 3:
+                    case 2:
                         return _context2.abrupt('return', _context2.sent);
 
-                    case 4:
+                    case 3:
                     case 'end':
                         return _context2.stop();
                 }

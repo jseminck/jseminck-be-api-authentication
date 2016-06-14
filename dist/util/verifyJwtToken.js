@@ -15,19 +15,23 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * Helper function to validate a json web token.
  */
 function verifyJwtToken(req, res, app) {
-    var requestKey = req.query.key;
-    var bodyKey = req.body.key;
+    var _req$query = req.query;
+    var requestKey = _req$query.key;
+    var requestToken = _req$query.token;
+    var _req$body = req.body;
+    var bodyKey = _req$body.key;
+    var bodyToken = _req$body.token;
 
 
-    if (!requestKey && !bodyKey) {
+    if (!requestKey && !bodyKey && !requestToken && !bodyToken) {
         return {
             success: false,
-            message: "Please provide a key"
+            message: "Please provide a key: ?key= or ?token="
         };
     }
 
     try {
-        _jsonwebtoken2.default.verify(requestKey || bodyKey, app.get('jwtKey'));
+        _jsonwebtoken2.default.verify(requestKey || bodyKey || requestToken || bodyToken, app.get('jwtKey'));
     } catch (err) {
         return {
             success: false,
