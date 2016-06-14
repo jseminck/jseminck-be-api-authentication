@@ -28,16 +28,17 @@ exports.default = function () {
             while (1) {
                 switch (_context2.prev = _context2.next) {
                     case 0:
-                        if (!(true && process.env.NODE_ENV === "DEVELOPMENT" || process.env.NODE_ENV === "TEST")) {
-                            _context2.next = 11;
+                        if (!(true || process.env.NODE_ENV === "DEVELOPMENT" || process.env.NODE_ENV === "TEST")) {
+                            _context2.next = 12;
                             break;
                         }
 
-                        _context2.prev = 1;
-                        _context2.next = 4;
+                        console.log("Creating data ...");
+                        _context2.prev = 2;
+                        _context2.next = 5;
                         return User.__recreate();
 
-                    case 4:
+                    case 5:
                         _users2.default.forEach(function () {
                             var ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee(user) {
                                 return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -66,21 +67,21 @@ exports.default = function () {
                         // await Expense.__recreate();
 
                         console.log("Data has been initialized"); // eslint-disable-line no-console
-                        _context2.next = 11;
+                        _context2.next = 12;
                         break;
 
-                    case 8:
-                        _context2.prev = 8;
-                        _context2.t0 = _context2['catch'](1);
+                    case 9:
+                        _context2.prev = 9;
+                        _context2.t0 = _context2['catch'](2);
 
                         console.log("Error while initializing data; ", _context2.t0); // eslint-disable-line no-console
 
-                    case 11:
+                    case 12:
                     case 'end':
                         return _context2.stop();
                 }
             }
-        }, _callee2, this, [[1, 8]]);
+        }, _callee2, this, [[2, 9]]);
     }));
 
     function configureData() {
