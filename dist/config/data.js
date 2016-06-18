@@ -18,8 +18,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { return step("next", value); }, function (err) { return step("throw", err); }); } } return step("next"); }); }; }
 
-// import * as Expense from './../models/Expense';
-
 exports.default = function () {
     var ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee2() {
         var _this = this;
@@ -28,17 +26,16 @@ exports.default = function () {
             while (1) {
                 switch (_context2.prev = _context2.next) {
                     case 0:
-                        if (!(true || process.env.NODE_ENV === "DEVELOPMENT" || process.env.NODE_ENV === "TEST")) {
-                            _context2.next = 12;
+                        if (!(process.env.NODE_ENV === "DEVELOPMENT" || process.env.NODE_ENV === "TEST")) {
+                            _context2.next = 11;
                             break;
                         }
 
-                        console.log("Creating data ...");
-                        _context2.prev = 2;
-                        _context2.next = 5;
+                        _context2.prev = 1;
+                        _context2.next = 4;
                         return User.__recreate();
 
-                    case 5:
+                    case 4:
                         _users2.default.forEach(function () {
                             var ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee(user) {
                                 return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -64,24 +61,22 @@ exports.default = function () {
                             };
                         }());
 
-                        // await Expense.__recreate();
-
                         console.log("Data has been initialized"); // eslint-disable-line no-console
-                        _context2.next = 12;
+                        _context2.next = 11;
                         break;
 
-                    case 9:
-                        _context2.prev = 9;
-                        _context2.t0 = _context2['catch'](2);
+                    case 8:
+                        _context2.prev = 8;
+                        _context2.t0 = _context2['catch'](1);
 
                         console.log("Error while initializing data; ", _context2.t0); // eslint-disable-line no-console
 
-                    case 12:
+                    case 11:
                     case 'end':
                         return _context2.stop();
                 }
             }
-        }, _callee2, this, [[2, 9]]);
+        }, _callee2, this, [[1, 8]]);
     }));
 
     function configureData() {
