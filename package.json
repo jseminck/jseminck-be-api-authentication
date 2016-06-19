@@ -37,7 +37,6 @@
     "async": "^1.5.2",
     "babel-polyfill": "^6.7.4",
     "bcrypt": "^0.8.5",
-    "env2": "^2.0.7",
     "jseminck-be-pg": "git+https://github.com/jseminck/jseminck-be-pg.git",
     "jseminck-be-server": "git+https://github.com/jseminck/jseminck-be-server.git",
     "jsonwebtoken": "^5.7.0",
