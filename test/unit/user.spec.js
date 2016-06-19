@@ -14,7 +14,9 @@ describe("User", function() {
         };
 
         this.User = proxyquire("./../../lib/models/User", {
-            './../pg/PGModel': () => this.PGModel,
+            'jseminck-be-pg': {
+                PGModel: () => this.PGModel
+            },
             './user/password': {
                 generate: this.generate
             }

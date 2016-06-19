@@ -35,13 +35,12 @@
   },
   "dependencies": {
     "async": "^1.5.2",
-    "babel-plugin-transform-runtime": "^6.6.0",
     "babel-polyfill": "^6.7.4",
     "bcrypt": "^0.8.5",
     "env2": "^2.0.7",
+    "jseminck-be-pg": "git+https://github.com/jseminck/jseminck-be-pg.git",
     "jseminck-be-server": "git+https://github.com/jseminck/jseminck-be-server.git",
     "jsonwebtoken": "^5.7.0",
-    "lodash": "^4.6.1",
-    "pg-promise": "^3.8.1"
+    "lodash": "^4.6.1"
   }
 }
