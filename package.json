@@ -40,6 +40,7 @@
     "jseminck-be-pg": "git+https://github.com/jseminck/jseminck-be-pg.git",
     "jseminck-be-server": "git+https://github.com/jseminck/jseminck-be-server.git",
     "jsonwebtoken": "^5.7.0",
-    "lodash": "^4.6.1"
+    "lodash": "^4.6.1",
+    "pug": "^2.0.0-beta3"
   }
 }
