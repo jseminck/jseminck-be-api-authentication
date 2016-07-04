@@ -4,7 +4,7 @@
 
 API for authentication with jSeminck.BE microservices.
 
-# API
+## API
 
 ### POST /api/login
 
@@ -48,5 +48,29 @@ When an incorrect username (and therefor, also an incorrect password) is provide
     "username",
     "password"
   ]
+}
+```
+
+### GET /api/login/verify
+Requires `?token=` or `?key=` query parameter or it will return the following error:
+```
+{
+  "success": false,
+  "message": "Please provide a key: ?key= or ?token="
+}
+```
+
+When providing a correct key it returns:
+```js
+{
+  "success": true
+}
+```
+
+When providing an incorrect key (or a key that has already been expired) it returns:
+```
+{
+  "success": false,
+  "message": "Incorrect key"
 }
 ```
