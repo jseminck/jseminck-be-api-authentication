@@ -6,6 +6,7 @@ mv ./jseminck-be-api-authentication.tgz jseminck-be-api-authentication/jseminck-
 cd jseminck-be-api-authentication
 tar -zxvf jseminck-be-api-authentication.tgz
 npm install
+npm run stop
 npm run start
 rm jseminck-be-api-authentication.tgz
 cd ..
