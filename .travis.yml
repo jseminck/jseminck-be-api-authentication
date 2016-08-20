@@ -5,7 +5,6 @@ env:
 - NODE_ENV=TEST CXX=g++-4.8
 addons:
   ssh_known_hosts: 95.85.25.10
-addons:
   postgresql: '9.4'
   apt:
     sources:
