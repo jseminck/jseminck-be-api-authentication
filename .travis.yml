@@ -4,16 +4,14 @@ node_js:
 env:
 - NODE_ENV=TEST CXX=g++-4.8
 addons:
-  ssh_known_hosts: 95.85.25.10
-services:
-- postgresql
-addons:
   postgresql: '9.4'
   apt:
     sources:
     - ubuntu-toolchain-r-test
     packages:
     - g++-4.8
+services:
+- postgresql
 before_script:
 - psql -c 'create database aws;' -U postgres
 - sleep 15
@@ -38,4 +36,3 @@ after_success:
 before_install:
 - openssl aes-256-cbc -K $encrypted_37c42d1fc8f1_key -iv $encrypted_37c42d1fc8f1_iv
   -in deploy-key.enc -out deploy-key -d
-
