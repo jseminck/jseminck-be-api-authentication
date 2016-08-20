@@ -1,9 +1,12 @@
 #!/bin/sh
 
+rm -rf jseminck-be-api-authentication
 mkdir jseminck-be-api-authentication
 mv ./jseminck-be-api-authentication.tgz jseminck-be-api-authentication/jseminck-be-api-authentication.tgz
 cd jseminck-be-api-authentication
 tar -zxvf jseminck-be-api-authentication.tgz
-docker build -t jseminck/api-authentication .
-docker run -p 9200:8080 -d jseminck/api-authentication
+npm install
+npm run start
 rm jseminck-be-api-authentication.tgz
+cd ..
+rm deploy.sh
